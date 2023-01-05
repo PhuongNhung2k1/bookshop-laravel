@@ -89,11 +89,12 @@ class ProductsController extends Controller
             'content.required'=>'Tiêu đề bắt buộc phải nhập',
             'price.required'=>'Gía sản phẩm bắt buộc phải nhập',
             'discount.required'=>'Giảm giá phải nhập số',
+            'discount.min'=>'Giam gia phai duoi 90%',
             'description.required'=>'Mô tả sản phẩm bắt buộc phải nhập',
         ]
     
     );
-        // dd($request);
+        dd($request);
         //   dd($data);
         $this->model->modelCreate();
         return redirect(url('backend/products'));

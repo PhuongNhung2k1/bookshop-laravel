@@ -16,7 +16,8 @@ class LoginCustomController extends Controller
         // $products = DB::table("products")->take(8)->get();
         // return view("frontend.account.login",["categories"=>$categories,"products"=>$products]);
         if(Auth::attempt($request->only('name','email','password'))){
-            return redirect('home')->with('success','Welcome');
+            // dd(Auth::user()->email);
+            return redirect('home')->with('success',Auth::user()->email);
         }
 
         return back()->with('error','Email or password is incorrect!');

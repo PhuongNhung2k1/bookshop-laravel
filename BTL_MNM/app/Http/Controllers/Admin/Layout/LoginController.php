@@ -38,14 +38,5 @@ class LoginController extends Controller
         return redirect('admin/login');
     }
 
-    public function validatePassword($password){
-        
-         $email = $_GET['email'];
-        $password = $_GET['password'];
-        if(preg_match("/[!-/0-9A-Za-z]/{6,}/",$password)==1){
-            return true;
-        }else {
-             return false;
-        }
-    }
+   
 }

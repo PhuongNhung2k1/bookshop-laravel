@@ -8,14 +8,13 @@
         <div class="container">
             <div class="login-box ptb--100">
                 <form method="post">
-                <!-- <form method="post" action="{{ url('customer/test-form') }}"> -->
                     @csrf
-                  
                     <div class="login-form-head">
                         <h4>Sign In</h4>
-                        <p>Hello there, Sign in and start managing your Admin Template</p>
+                        <p>Hello there, Sign in for this form</p>
                     </div>
                     <div class="login-form-body">
+                       
                         @if(session()->has('error'))
                         <div class="alert alert-danger">
                             <button type="button" class="close" style="height: 50px;" data-dismiss="alert"></button>

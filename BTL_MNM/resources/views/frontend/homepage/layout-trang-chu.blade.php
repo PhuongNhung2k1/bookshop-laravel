@@ -135,7 +135,7 @@
                         <a href="{{ url('customer/products/detail/'.$product->id)}}" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
 
 
-                        <a href="{{ url('customer/addCart/'.$product->id)}}" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add to cart</a>
+                        <a href="{{ route('cart.add',['id'=>$product->id]) }}" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add to cart</a>
 
 
                         </form>

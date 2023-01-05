@@ -17,7 +17,7 @@
 				<div class="row" style="margin-top:5px;">
 					<div class="col-md-3">Tiêu đề
 						@error('name')
-						<span style="color: red;font-size:10px">* <br>Tiêu đề hông được bỏ trống</span>
+						<span style="color: red;font-size:10px">* <br>Tiêu đề không được bỏ trống</span>
 						@enderror
 					</div>
 

@@ -15,7 +15,6 @@ use App\Http\Controllers\Customer\RegisterCustomController;
 use App\Http\Controllers\Customer\ProductsCustomController;
 use App\Http\Controllers\Customer\CartController;
 use Illuminate\Support\Facades\Auth;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -136,14 +135,22 @@ Route::get('customer/categories/{cateID}',[ProductsCustomController::class, 'get
 
 //cart
 
-// Route::get('customer/cart',[CartController::class, 'viewcart']);
-Route::get('customer/cart',[CartController::class, 'viewcart']);
+// Route::get('customer/cart/{id}',[CartController::class, 'viewcart']);
 
-Route::get('customer/addCart/{id}',[CartController::class, 'addCart']);
-Route::post('customer/removeProduct/{id}',[HomeCustomController::class, 'removeProduct']);
+// Route::get('customer/addCart/{id}',[CartController::class, 'addCart']);
+// Route::post('customer/removeProduct/{id}',[HomeCustomController::class, 'removeProduct']);
 
-Route::get('customer/delCart/{id}',[CartController::class, 'delCart']);
+// Route::get('customer/delCart/{id}',[CartController::class, 'delCart']);
 
+Route::get('customer/cart',[CartController::class, 'viewCart']);
+
+Route::group(['prefix' => 'cart'], function () {
+    Route::get('add/{id}', [CartController::class, 'add'])->name('cart.add');
+    Route::get('remove/{id}', [CartController::class, 'remove'])->name('cart.remove');
+    Route::get('update{id}/{quantity}', [CartController::class, 'update'])->name('cart.update');
+    Route::get('clear', [CartController::class, 'clear'])->name('cart.clear');
+   
+});
 Route::get('customer/order',[CartController::class, 'orders']);
 Route::get('customer/orderDetail/{id}',[CartController::class, 'orderDetail']);
 Route::get('customer/orderSuceess',[CartController::class, 'orderSuceess']);

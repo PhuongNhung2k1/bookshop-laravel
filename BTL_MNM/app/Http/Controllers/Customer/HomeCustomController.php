@@ -7,9 +7,11 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 
-use App\Models\Cart;
+
 use App\Models\Products;
 use Illuminate\Support\Facades\DB;
+// in ra so luong trong gio hang
+use App\Models\Cart;
 class HomeCustomController extends Controller
 {
     //
@@ -17,7 +19,9 @@ class HomeCustomController extends Controller
         //lay csdl
         $categories = DB::table("categories")->get();
         $products = DB::table("products")->take(8)->get();
-        return view("frontend.homepage.layout-trang-chu",["categories"=>$categories,"products"=>$products]);
+        $cart = new Cart();// lay so luong trong cart
+        return view("frontend.homepage.layout-trang-chu",["categories"=>$categories,"products"=>$products,"cart"=>$cart]);
+       
         $user = auth()->users();
     }
     

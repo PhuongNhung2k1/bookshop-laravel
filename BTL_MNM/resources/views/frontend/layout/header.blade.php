@@ -74,34 +74,16 @@
             </a>
             <a href="{{url('customer/cart')}}" class="btn border shoppingcart">
                 <i class="fas fa-shopping-cart text-primary"></i>
-                <span class="mini-cart-count"> 2 </span><i class="fa fa-caret-down"></i>
+                <span class="mini-cart-count">(
+                    <!-- lay duoc thong tin da them vao gio hang  -->
+                     {{ $cart->total_quantity }},
+                     {{ number_format($cart->total_price)}})
+                     </span><i class="fa fa-caret-down"></i>
             </a>
 
 
         </div>
-        <div class="col-lg-3 text-right col-md-3">
-            <div class="nav-right">
-                <li class="Heart-icon"><a href="#">
-                        <i class="icon_heart_alt"></i>
-                        <span>1</span>
-                    </a>
-                </li>
-                <li class="cart-icon"><a href="#">
-                        <i class="icon_bag_alt"></i>
-                        <span>3</span>
-                    </a>
-                    <div class="cart-hover">
-                        <div id="change-item-cart">
-
-                        </div>
-                        <div class="select-items">
-
-                        </div>
-                    </div>
-
-                </li>
-            </div>
-        </div>
+      
         <!-- <div class="col-lg-3 col-md-3 align-content-end mini-cart">
             <div class="wrapper-mini-cart"> <span class="icon"><i class="fa fa-shopping-cart"></i></span> <a href="cart"> <span class="mini-cart-count"></span> 2sản phẩm <i class="fa fa-caret-down"></i></a>
                 <div class="content-mini-cart">

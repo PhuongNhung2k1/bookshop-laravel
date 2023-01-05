@@ -11,8 +11,9 @@
     <div class="login-area">
         <div class="container">
             <div class="login-box ptb--100">
-                <form action="test_form.php" method="post">
+                <form method="post">
                      @csrf
+                  
                     <div class="login-form-head">
                         <h4>Sign up</h4>
                         <p>Hello there, Sign up and Join with Us</p>
@@ -23,7 +24,9 @@
                             <label for="name">Full Name</label>
                             <input type="text" name="name" required>
                             <i class="ti-user"></i>
-                            <div class="text-danger"></div>
+                            @if($errors->has('name'))
+                            <div class="text-danger">{{$error->first('name')}}</div>
+                            @endif
                         </div>
                         <div class="form-gp">
                             <label for="email">Email address</label>

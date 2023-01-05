@@ -20,7 +20,7 @@
                 <div class="d-flex">
                      <button class="btn btn-outline-dark flex-shrink-0" type="button" style="border:1px solid #ccc;">
                         <i class="bi-cart-fill me-1"></i>
-                        <a href="{{ url('customer/addCart/'.$detailProd->id)}}" style="font-size:18px">Add to cart</a>
+                        <a href="{{ url('customer/cart/'.$detailProd->id)}}" style="font-size:18px">Add to cart</a>
                         
                          </button>
                 </div>
