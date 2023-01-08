@@ -1,0 +1,732 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body {
+    z-index: 9;
+}
+/* CSS Phần header  */
+.container {
+    margin: 0 70px;
+}
+
+header {
+    height: 60px;
+    font-size: 16px;
+}
+
+header .top-header {
+     width: 100%;
+     position: fixed;
+}
+.top-header {
+    background-color:#ef8868;
+    display: flex;
+    justify-content: space-around;
+}
+
+.logo-header img {
+    margin-top: 8px;
+    border-radius: 2px;
+    box-shadow: 2px 2px rgb(235, 204, 186);
+}
+
+.top-header .search {
+    line-height: 60px;
+}
+
+
+.search input {
+    width: 350px;
+    height: 30px;
+    border: none;
+    border-radius: 2px;
+}
+.top-header .right-header ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    line-height: 60px;
+}
+
+i{
+    margin: 0 3px;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.right-header ul li {
+    padding: 0 25px;
+    
+}
+
+.right-header ul li:hover a{
+    color: #fff;
+}
+
+.top-header i,
+.right-header ul li a{
+   color: #fff;
+   font-size: 16px;
+}
+
+.menu-header {
+    height: 60px;
+    background-color: #f7f1f1;
+}
+.menu-header {
+   text-align: center;
+
+}
+.menu-header li{
+    justify-content: center;
+    display: inline-block;
+    padding: 0 30px;
+    line-height: 60px;
+    font-size: 18px;
+}
+
+.menu-header li:hover {
+    background-color: #98db63;
+    text-decoration: underline red;
+}
+/* chi cho menu cap 1 */
+.menu-header li:hover >a{
+    color: #fff;
+}
+.menu-header ul li a{
+    color: #000;
+    
+}
+
+.header-subMenu {
+    position: absolute;
+    background-color: #f7f1f1;
+    box-shadow: 3px 3px #99db63;
+    display: none;
+    width: 200px;
+    margin-left: 30px;
+}
+
+.header-subMenu li {
+    /*khong cho cac thanh phan khac tran len */
+    clear: both;
+    display: block;
+}
+
+.menu-header li:hover >ul{
+    text-transform: 3s;
+    display: block;
+}
+
+/* Sidebar header  */
+.slider-header{
+    
+    background-repeat: no-repeat;
+}
+                                            /* CSS Main  */
+main .products {
+    width: 80px auto;
+}
+main > h2 {
+    margin-top: 30px;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    background-color: #f44757;
+}
+
+main .list-product{
+    display: flex;
+ /* thuoc tinh de tu dong xuong hang khi du chieu rong  */
+    flex-wrap: wrap;
+}
+
+.list-product .item {
+    border: 1px solid #ccc;
+    margin-right: 25px;
+}
+
+.item {
+    width: calc(100%/4 - 30px);
+    margin: 20px 0;
+}
+
+.item .img-prod {
+     text-align: center;
+     margin-top: 5px;
+
+}
+
+
+.img-prod{
+    max-width: 250px;
+    overflow: hidden;
+}
+.img-prod img:hover {
+    transition: 2s;
+    transform: scale(1.2);
+}
+
+.info-prod {
+    height: 310px;
+}
+
+.item:hover .info-prod {
+     opacity: 0.5;
+}
+
+.item:hover {
+   transition: 2s;
+   transform: scale(1.05);
+   box-shadow: 2px 2px #99db63;
+   cursor: pointer;
+ 
+}
+
+.item:hover .add-cart {
+    display:block ;
+    border-radius: 10px;
+}
+
+.product h3,
+.item .img-prod,
+.rate-prod,
+.item .des-prod,
+.item .price-prod{
+    margin: 5px 0px 5px 15px;
+}
+
+.item .price-prod span {
+    font-weight: bold;
+}
+
+.item .price-prod span i{
+    margin-right: 2px;
+    display: inline-block;
+    background-color: yellow;
+}
+.item .price-prod span:nth-child(1){
+    text-decoration: line-through ;
+}
+
+.item .price-prod span:nth-child(2) {
+    margin-left: 20px;
+    color: blue;
+}
+.item .des-prod {
+    max-width: 250px;
+    overflow: hidden;
+}
+  /* CSS CHO PHẦN CHI TIẾT SẢN PHẨM  */ 
+.detai_prod_title h2{
+    margin: 15px;
+ }
+section.detai_prod_title {
+    padding: 20px 0;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+}
+.detail_poduct {
+    display: flex;
+}
+
+.info_product >div{
+    margin-left: 20px;
+}
+
+.detail_poduct .button_adds,
+.info_product_price{
+    margin: 15px 0;
+}
+.detail_poduct .btn_cart a{
+    display: inline-block;
+    padding: 10px;
+    background-color: #f76767;
+    border: none;
+    border-radius: 5px;
+    margin: 10px 20px 0 0;
+    width: 100px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.detail_poduct .btn_cart input:hover{
+    opacity: 0.9;
+}
+.info_prod_intro p{
+    line-height: 28px;
+}
+
+/* css phần đánh giá sao  */
+.info_product_rating ul {
+    list-style-type: none;
+    padding: 10px 0;
+}
+
+.info_product_rating ul li {
+    display: inline-block;
+}
+/* Phần hiển thị ảnh khác của ảnh chính  */
+.img_prod_sub li{
+    display: inline-block;
+}
+.img_prod_sub img ,
+.img_product .img_prod_main img{
+    border: 1px solid #ccc;
+}
+
+.detail_poduct .img_product .img_prod_sub ul{
+    display: flex;
+    max-width: 400px;
+    max-height: 180px;
+    overflow: scroll;
+    margin-left: -22px;
+}
+.img_prod_sub img {
+    width: 100px;
+    margin: 5px;
+}
+.cart {
+    margin-top: 30px;
+    padding: 20px;
+    display: flex;
+    text-align: center;
+}
+.cart .add_cart {
+    border: 1px solid #e9663a;
+    text-align: center;
+}
+.cart input {
+background-color: #e42424;
+color: #fff;
+border: none;
+display: block;
+margin-left: 20px;
+width: 200px;
+text-align: center;
+height: 50px;
+}
+ /* xử lý phần thêm vào giỏ hàng  */
+/* .products .add-cart {
+   display: none;
+ }*/
+.products .add-cart button{
+    background-color: #f5606d;
+    padding: 10px;
+    margin-left: 30px;
+    border: none;
+    color: #fff;
+    margin-bottom:20px;
+    cursor: pointer;
+ 
+ }
+
+ .item .add-cart {
+    text-align: center;
+    /*margin-top: -160px;*/
+ }
+
+ /* CSS cho phần phuonwng thức  */
+ .list-method {
+    background-color: rgb(241, 211, 176);
+    font-size: 15px;
+ }
+ .methods {
+  /* //  vertical-align: middle; */
+    display: flex;
+    justify-content: space-between;
+ }
+
+ .method >div {
+    margin-left: 10px;
+ }
+ .methods img {
+    border-radius: 50%;
+ }
+ .method p {
+    margin-top: 5px;
+ }
+ .methods .method {
+    display: flex;
+    padding: 20px;
+ }
+
+ /* css cho phần hiển thị giỏ hàng */
+.product-shoppingCart tr td{
+    width: 150px;
+}
+.product-shoppingCart tr:last-child td{
+    border: none;
+}
+
+.product-shoppingCart tr:last-child td:hover{
+    opacity: 0.9;
+}
+.product-shoppingCart tr:last-child td a,
+.product-shoppingCart tr:last-child td input {
+    display: inline-block;
+    padding:    10px;
+    background-color:#fc5a5a;
+    margin: 20px 0;
+    border-radius: 10px;
+    color: #fff;
+    border: none;
+}
+
+.product-shoppingCart .total-pay a{
+    margin-bottom: 100px;
+    display: block;
+
+}
+ /* xử lý phần thêm vào giỏ hàng  */
+ .products .add-cart {
+   /*display: none;*/
+ }
+.products .add-cart a{
+  /*s*/
+     background-color: #f5606d;
+
+    margin: 20px 0 20px 0;
+    margin-left: 30px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 5px;
+    width: 200px;
+ }
+
+ .item .add-cart {
+    text-align: center;
+    /*margin-top: -160px;*/
+ }
+
+ /* CSS cho phần phuonwng thức  */
+ .list-method {
+    background-color: rgb(241, 211, 176);
+    font-size: 15px;
+ }
+ .methods {
+  /* //  vertical-align: middle; */
+    display: flex;
+    justify-content: space-between;
+ }
+
+ .method >div {
+    margin-left: 10px;
+ }
+ .methods img {
+    border-radius: 50%;
+ }
+ .method p {
+    margin-top: 5px;
+ }
+ .methods .method {
+    display: flex;
+    padding: 20px;
+ }
+                                        /* CSS FOOTER  */
+footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #eee6db;
+ }
+
+
+ footer,footer div {
+    margin-top: 20px;
+ }
+
+ footer .purchase ul{
+   margin-top: 30px;
+ }
+ footer .purchase ul li a{
+    display: flex;
+ }
+ footer ul {
+    list-style-type: none;
+ }
+
+ footer li {
+    padding: 10px;
+ }
+ /* chat mess footer  */
+ /* ======================================================================== */
+ 
+/* CSS CHO PHẦN LOGIN  */
+
+/* CSS cho phần hot news */
+.hot-new-left {
+   
+}
+.hot-news>div{
+    display: flex;
+    background-color: rgb(230, 223, 223);
+    padding: 20px;
+}
+
+.hot-news>div>div{
+    margin-right: 10px;
+}
+.news-item:hover {
+    color: red;
+}
+.hot-news>h2 {
+    color: red;
+    padding: 10px 0;
+    text-align: center;
+}
+.hot-news a {
+    display: flex;
+    color: #000;
+}
+
+.news-item { 
+
+    flex-wrap: wrap;
+    display: flex;
+}
+.news-info p ,
+.news-info h3 {
+   margin-left: 20px;
+   text-align: justify;
+   display: -webkit-box;
+    height: 16px*1.3*3;
+    font-size: 16px;
+    line-height: 1.3;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 10px;
+}
+/* CSS PHẦN FORM SIGNIN ( đăng ký)  */
+.register-page{
+   display: flex;
+   width: 80%;
+   margin: 30px auto;
+   font-size: 15px;
+   box-shadow: 2px 2px 2px 2px #99db63;
+   height: auto;
+   padding: 20px;
+   background-color: rgb(252, 248, 248);
+}
+
+
+.form-register{
+    margin-right: 20px;
+}
+
+.form-register label {
+    float: left;
+    margin-top: 20px;
+}
+
+.form-register input {
+  width: 400px;
+  height: 30px;
+}
+
+.form-register div {
+    padding: 0 10px;
+}
+
+.note-register h3 {
+    color: red;
+}
+.note-register p{
+    margin: 10px 20px;
+    /* căn đều lề 2 bên đoạn text  */
+    text-align: justify;
+    letter-spacing: 0.5px;
+    vertical-align: middle;
+}
+
+.register-page input.input-control,
+.note-register a {
+    text-transform:capitalize;
+    font-weight: bold;
+    margin: 10px 0; 
+    padding: 10px;
+    border:none;
+    margin-right: 20px;
+    background-color: #f77565;
+    cursor: pointer;
+    border-radius:5px;
+}
+
+.note-register a {
+    width: 100px;
+    display: block;
+    margin-top: 10px;
+}
+.register-page input.input-control:hover {
+    opacity: 0.8;
+}
+
+/* CSS Cho phần category  */
+/* css cho menu hiển thị danh sách trong CATEGORY  */
+.category_prod {
+    display: flex;
+    margin: 20px 0;
+}
+
+.cate_filter {
+    width: 23%;
+    border: 1px solid #ccc;  
+}
+
+.cate_filter>div {
+    padding: 10px;
+}
+.cate_filter>div>div {
+    padding: 10px 0;
+}
+.cate_product {
+    margin-left: 15px;
+    width: calc(100% - 23px);
+}
+
+.cate_Byresult-search ul {
+    list-style-type: none;
+    background-color: #ccc;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.cate_Byresult-search ul li {
+    display: inline-block;
+    padding: 0 20px;
+}
+.cate_Byresult-search ul li:hover {
+     background-color: #3cb371;
+   
+}
+.cate_Byresult-search ul li:hover a {
+      color: #fff;
+}
+.cate_Byresult-search ul li a {
+    line-height:40px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;
+}
+/* css cho phần tìm kiếm sản phẩm theo giá  */
+.search-byprice{
+   border:1px solid #ccc ;
+
+}
+.search-byprice >div{
+    margin-left: 20px;
+}
+.search-byprice >div>input{
+    background-color: #50a22c;
+    border: none;
+    height: 30px;
+    border-radius: 8px;
+    margin-top: 10px;
+    cursor: pointer;
+    color: #fff;
+}
+.search-byprice ul {
+    list-style-type: none;
+}
+.search-byprice a{
+    color: #000;
+}
+.search-byprice li {
+    padding: 10px 0;
+}
+.search-byprice input{
+    width: 150px;
+    height:20px;
+    margin-left: 20px;
+}
+.search-byprice span {
+    display: inline-block;
+    width:80px;
+}
+/* CSS ho phần sản phẩm có thể thích  */
+.similar-prod .list-product{
+    display: flex;
+    overflow: scroll;
+    margin: 30px 0;
+}
+/* CSS cho phần danh sách tin tức */
+.dis-list-news {
+    display: flex;
+    height: auto;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+}
+
+.dis-news-main{
+    max-width:65%;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-bottom: none;
+}
+.dis-list-news .dis-news-left,
+.dis-list-news .dis-news-right{
+   
+}
+
+.dis-list-news h2,
+.dis-list-news h3{
+    display: block;
+    padding: 15px;
+}
+
+/* div[class^="dis-news-"] */
+.page-news-item {
+    display: flex;
+    padding: 0 10px;
+}
+.page-news-item div:nth-child(1){
+    margin-right: 8px;
+}
+
+.page-news-item:last-child hr{
+    display: none;
+}
+
+.page-news-item .content-new{
+    display: -webkit-box;
+    height: 16px*1.3*3;
+    font-size: 16px;
+    line-height: 1.3;
+    -webkit-line-clamp: 4;  /* số dòng hiển thị */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top:10px;
+} 
+/* css cho phaanf hien thi chi tiet thong tin tim kiem */
+.dis-news-righ >div{
+    margin-left: 10px;
+}
+.dis-news-left ,
+.dis-news-right{
+    max-width: 25%;
+    overflow: hidden;
+}
+
+.dis-news-main {
+    padding: 10px 20px;
+}
+
+.dis-news-main>div{
+    padding: 20px 0;
+}
+.dis-news-state-1 img {
+    width: 500px;
+    height: 200px;
+    margin: auto;
+}
